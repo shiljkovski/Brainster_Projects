@@ -1,0 +1,15 @@
+Објаснување на проектот
+1. Проектот е започнат на main гранката и веќе беше касно да го преместам на гранка бидејки 90% merge request беа на неа
+2. За PHP делот преку скрипта во form.php креирам база и две табели бидејќи не знам како би провериле вие дека функционира
+$servername = "localhost";
+    $username = "root";
+    $dbname = "marko_project_one_db";
+
+    $conn = new mysqli($servername, $username, "", $dbname);
+    Се надевам дека користите XAMPP бидејки имав проблем со password-от имaм вметнато ( "",), доколку имате password
+    treba da se dodade $password во конекцијата и да се дефинира.
+
+
+    Доколку имате повеќе прашања контактирајте ме на Rocket.chat
+    
+    Marko

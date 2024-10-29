@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+.table-container {
+  background-color: var.$background-color-base;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 127.89px - 52px);
+  background-color: var.$background-color-base;
+  padding-bottom: 150px;
+  @include mix.tablet-styles {
+    min-height: calc(100vh - 249.48px - 52px);
+  }
+  @include mix.mobile-l-styles {
+    min-height: calc(100vh - 66.91px - 52px);
+    justify-content: start;
+  }
+
+  h1 {
+    font-size: var.$font-size-base * 4;
+    text-align: center;
+    padding: 200px 0;
+    color: var.$text-color-tertiary;
+    @include mix.tablet-styles {
+      padding: 100px 0;
+    }
+    @include mix.mobile-l-styles {
+      font-size: var.$font-size-base * 2.3;
+      padding: 20px 0;
+    }
+  }
+
+  table {
+    width: 70%;
+    border: 2px solid var.$background-color-base;
+    border-collapse: collapse;
+    border-radius: 10px;
+    th {
+      background: var.$background-color-secondary;
+    }
+    td {
+      background: var.$background-color-primary;
+    }
+    th,
+    td {
+      padding: 5px;
+      color: var.$text-color-primary;
+      text-align: center;
+      @include mix.mobile-l-styles {
+        padding: 1px;
+        font-size: var.$font-size-base * 0.5;
+        font-weight: var.$font-weight-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainster Labs</title>
+    <style>
+        .card {
+            width: 30%;
+            border: 1px solid gray;
+            display: inline-block;
+            padding: 10px;
+        }
+        .coding {
+            background-color: lightseagreen;
+        }
+        .design {
+            background-color: lightpink;
+        }
+        .marketing {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="filters">
+        <button id="filter-coding">Show coding</button>
+        <button id="filter-design">Show design</button>
+        <button id="filter-marketing">Show marketing</button>
+        <button id="filter-all">Show all</button>
+    </div>
+    <hr />
+    <div class="cards">
+        <div class="card coding" >
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card design">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card design">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#filter-coding").addEventListener("click", filterCoding);
+        document.querySelector("#filter-design").addEventListener("click", filterDesign);
+        document.querySelector("#filter-marketing").addEventListener("click", filterMarketing);
+        document.querySelector("#filter-all").addEventListener("click", showAllCards);
+
+        function filterCoding() {
+            hideAllCards();
+
+            var codingCards = document.querySelectorAll(".coding");
+            codingCards.forEach(codingCard => {
+                codingCard.style.display = "inline-block";
+            });
+        }
+
+        function filterDesign() {
+            hideAllCards();
+
+            var designCards = document.querySelectorAll(".design");
+            designCards.forEach(designCard => {
+                designCard.style.display = "inline-block";
+            });
+        }
+
+        function filterMarketing() {
+            hideAllCards();
+
+            var marketingCards = document.querySelectorAll(".marketing");
+            marketingCards.forEach(marketingCard => {
+                marketingCard.style.display = "inline-block";
+            });
+        }
+
+        function hideAllCards() {
+            var allCards = document.querySelectorAll(".card");  
+
+            allCards.forEach(card => {
+                card.style.display = "none";
+            });
+        }
+
+        function showAllCards() {
+            var allCards = document.querySelectorAll(".card");  
+
+            allCards.forEach(card => {
+                card.style.display = "inline-block";
+            });
+        }
+    </script>
+</body>
+</html>

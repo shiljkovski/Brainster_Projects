@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+footer {
+  background-color: var.$background-color-secondary;
+  text-align: center;
+  p {
+    padding: 10px;
+    margin-bottom: 0;
+    color: var.$text-color-primary;
+    font-weight: var.$font-weight-bold;
+  }
+}

@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.banner {
+  display: flex;
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 166, 0, 0.5)),
+    url("../Design/brainster_cover.png");
+  background-size: cover;
+  background-position: center right;
+  background-position: center;
+  h1 {
+    text-transform: capitalize;
+    font-size: var.$font-size-base * 4;
+    color: var.$text-color-primary;
+    @include mix.mobile-l-styles {
+      font-size: var.$font-size-base * 3;
+    }
+  }
+}
+.on-hover {
+  &:hover {
+    color: var.$text-color-secondary;
+  }
+}
+.steam {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var.$background-color-tertiary;
+  margin-top: -75px;
+  margin-left: 75px;
+  z-index: 0;
+  opacity: 0;
+  @include mix.four-k-styles {
+    left: 40%;
+  }
+  @include mix.laptop-l-styles {
+    left: 32%;
+  }
+  @include mix.laptop-m-styles {
+    left: 24%;
+  }
+  @include mix.tablet-styles {
+    left: 16%;
+  }
+
+  @include mix.mobile-l-styles {
+    left: -5%;
+  }
+}
+#steam1 {
+  -webkit-animation: steam1 3s ease-out infinite;
+  animation: steam1 3s ease-out infinite;
+}
+
+#steam3 {
+  -webkit-animation: steam1 3s ease-out 1s infinite;
+  animation: steam1 3s ease-out 1s infinite;
+}
+
+@-webkit-keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-200px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-200px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+#steam2 {
+  -webkit-animation: steam2 4s ease-out 0.5s infinite;
+  animation: steam2 4s ease-out 0.5s infinite;
+}
+
+#steam4 {
+  -webkit-animation: steam2 4s ease-out 1.5s infinite;
+  animation: steam2 4s ease-out 1.5s infinite;
+}
+
+@-webkit-keyframes steam2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-200px) translateX(20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes steam2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-200px) translateX(20px) scale(1);
+    opacity: 0;
+  }
+}
+.flipX {
+  animation: 4s anim-flipX ease;
+}
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+}

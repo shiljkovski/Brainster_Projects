@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainster Labs</title>
+    <style>
+        .card {
+            width: 30%;
+            border: 1px solid gray;
+            display: inline-block;
+            padding: 10px;
+        }
+        .coding {
+            background-color: lightseagreen;
+        }
+        .design {
+            background-color: lightpink;
+        }
+        .marketing {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="filters">
+        <input type="checkbox" id="filter-coding"><label for="filter-coding">Show only coding</label> 
+        <input type="checkbox" id="filter-design"><label for="filter-design">Show only design</label> 
+        <input type="checkbox" id="filter-marketing"><label for="filter-marketing">Show only marketing</label> 
+    </div>
+    <hr />
+    <div class="cards">
+        <div class="card coding" >
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card design">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card marketing">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card design">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+        <div class="card coding">
+            <h1>Title</h1>
+            <p>Body</p>
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelector("#filter-coding").addEventListener("change", filterCoding);
+        document.querySelector("#filter-design").addEventListener("change", filterDesign);
+        document.querySelector("#filter-marketing").addEventListener("change", filterMarketing);
+        
+
+        function filterCoding() {
+            hideAllCards();
+
+            if(document.querySelector("#filter-coding").checked) {
+                var codingCards = document.querySelectorAll(".coding");
+                codingCards.forEach(codingCard => {
+                    codingCard.style.display = "inline-block";
+                });
+
+                document.querySelector("#filter-design").checked = false;
+                document.querySelector("#filter-marketing").checked = false;
+            } else {
+                showAllCards();
+            }
+        }
+
+        function filterDesign() {
+            hideAllCards();
+
+            if(document.querySelector("#filter-design").checked) {
+                var designCards = document.querySelectorAll(".design");
+                designCards.forEach(designCard => {
+                    designCard.style.display = "inline-block";
+                });
+
+                document.querySelector("#filter-coding").checked = false;
+                document.querySelector("#filter-marketing").checked = false;
+            } else {
+                showAllCards();
+            }
+        }
+
+        function filterMarketing() {
+            hideAllCards();
+
+            if(document.querySelector("#filter-marketing").checked) {
+                var marketingCards = document.querySelectorAll(".marketing");
+                marketingCards.forEach(marketingCard => {
+                    marketingCard.style.display = "inline-block";
+                });
+
+                document.querySelector("#filter-design").checked = false;
+                document.querySelector("#filter-coding").checked = false;
+            } else {
+                showAllCards();
+            }
+        }
+       
+
+        function hideAllCards() {
+            var allCards = document.querySelectorAll(".card");  
+
+            allCards.forEach(card => {
+                card.style.display = "none";
+            });
+        }
+
+        function showAllCards() {
+            var allCards = document.querySelectorAll(".card");  
+
+            allCards.forEach(card => {
+                card.style.display = "inline-block";
+            });
+        }
+    </script>
+</body>
+</html>

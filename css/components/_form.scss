@@ -1,0 +1,117 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.form-section {
+  min-height: calc(100vh - 127.89px - 52px);
+  background-color: var.$background-color-base;
+  @include mix.tablet-styles {
+    min-height: calc(100vh - 249.48px - 52px);
+  }
+  @include mix.mobile-l-styles {
+    min-height: calc(100vh - 66.91px - 52px);
+  }
+
+  h1 {
+    font-size: var.$font-size-base * 4;
+    text-align: center;
+    padding: 200px 0;
+    color: var.$text-color-tertiary;
+    @include mix.tablet-styles {
+      padding: 100px 0;
+    }
+    @include mix.mobile-l-styles {
+      font-size: var.$font-size-base * 2.3;
+      padding: 20px 0;
+    }
+  }
+}
+.form-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  @include mix.tablet-styles {
+    .error-msg {
+      font-size: var.$font-size-base * 0.7;
+    }
+  }
+  @include mix.mobile-l-styles {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    .error-msg {
+      font-size: var.$font-size-base * 0.9;
+    }
+  }
+  .form-container {
+    flex-basis: 50%;
+    flex-grow: 1;
+
+    .input-wrap {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 15px;
+      label,
+      .error-msg {
+        font-weight: var.$font-weight-bold;
+      }
+    }
+    input label {
+      font-weight: var.$font-weight-bold;
+      font-size: var.$font-size-base * 0.9;
+    }
+
+    .error-msg {
+      display: none;
+      border: 1px solid red;
+      background-color: var.$background-color-primary;
+      color: var.$text-color-primary;
+      border-radius: 5px;
+      &.visible {
+        display: block;
+        padding-left: 8px;
+      }
+    }
+
+    input {
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      &::placeholder {
+        font-style: italic;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    select {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: var.$font-size-base * 0.9;
+      font-weight: var.$font-weight-bold;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 30px;
+      padding: 15px;
+      cursor: pointer;
+      @include mix.mobile-l-styles {
+        margin-top: 150px;
+      }
+    }
+  }
+}
+
+.error {
+  outline: 1px solid red;
+}
+.success {
+  outline: 1px solid green;
+}
+.error_db {
+  text-align: center;
+}

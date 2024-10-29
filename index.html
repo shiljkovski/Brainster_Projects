@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/27a957b448.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/27a957b448.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo center-div">
+          <a href="https://brainster.co/" target="_blank"
+            ><img src="./Design/Logo.png" alt="logo" class="img-logo" />
+            <p class="p-logo">brainster</p></a
+          >
+        </div>
+        <ul class="desktop-menu">
+          <li>
+            <a href="https://brainster.co/marketing/" target="_blank"
+              >Академија за маркетинг</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/full-stack/" target="_blank"
+              >Академија за програмирање</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/data-science/" target="_blank"
+              >Академија за data science</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/graphic-design/" target="_blank"
+              >Академија за дизајн</a
+            >
+          </li>
+        </ul>
+        <a href="./form.php" class="btn">Вработи наш студент</a>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <ul id="mobile-menu" class="mobile-menu">
+          <li>
+            <a href="https://brainster.co/marketing/" target="_blank"
+              >Академија за маркетинг</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/full-stack/" target="_blank"
+              >Академија за програмирање</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/data-science/" target="_blank"
+              >Академија за data science</a
+            >
+          </li>
+          <li>
+            <a href="https://brainster.co/graphic-design/" target="_blank"
+              >Академија за дизајн</a
+            >
+          </li>
+          <li><a href="./form.php" class="btn">Вработи наш студент</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="banner center-div">
+      <div class="steam on-hover" id="steam1"></div>
+      <div class="steam on-hover" id="steam2"></div>
+      <div class="steam on-hover" id="steam3"></div>
+      <div class="steam on-hover" id="steam4"></div>
+      <div class="line">
+        <h1 class="flipX">Brainster Labs</h1>
+      </div>
+    </div>
+    <!-- filter -->
+
+    <div class="filters">
+      <div class="filter-container">
+        <label for="filter-marketing"
+          >Проекти на студенти по академијата за маркетинг</label
+        >
+        <input type="checkbox" id="filter-marketing" />
+        <i class="fa-solid fa-circle-check fa-2x"></i>
+      </div>
+      <div class="filter-container">
+        <label for="filter-coding"
+          >Проекти на студенти по академијата за програмирање</label
+        >
+        <input type="checkbox" id="filter-coding" />
+        <i class="fa-solid fa-circle-check fa-2x"></i>
+      </div>
+      <div class="filter-container">
+        <label for="filter-design"
+          >Проекти на студенти по академијата за дизајн</label
+        >
+        <input type="checkbox" id="filter-design" />
+        <i class="fa-solid fa-circle-check fa-2x"></i>
+      </div>
+    </div>
+    <div class="bg-overlay">
+      <h2 class="center-div">Проекти</h2>
+      <div class="card-wrapper">
+        <div class="cards">
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_1.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_2.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_3.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_4.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_5.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_6.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_7.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_8.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_9.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card coding">
+            <div class="card-container">
+              <img src="./Design/coding_10.jpg" alt="codeing" />
+              <div class="text-div">
+                <span>Академија за програмирање</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card design">
+            <div class="card-container">
+              <img src="./Design/design_1.jpg" alt="design" />
+              <div class="text-div">
+                <span>Академија за дизајн</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card design">
+            <div class="card-container">
+              <img src="./Design/design_2.jpg" alt="design" />
+              <div class="text-div">
+                <span>Академија за дизајн</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card design">
+            <div class="card-container">
+              <img src="./Design/design_3.jpg" alt="design" />
+              <div class="text-div">
+                <span>Академија за дизајн</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card design">
+            <div class="card-container">
+              <img src="./Design/design_4.jpg" alt="design" />
+              <div class="text-div">
+                <span>Академија за дизајн</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_1.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_2.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_3.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_4.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_5.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="card marketing">
+            <div class="card-container">
+              <img src="./Design/marketing_6.jpg" alt="marketing" />
+              <div class="text-div">
+                <span>Академија за Маркетинг</span>
+                <h3>Име на проектот стои овде со две линии</h3>
+                <p>
+                  Краток опис во кој студентите ќе можат да опишат за што се
+                  работи во проектот
+                </p>
+                <h5>Април-Декември 2023</h5>
+                <a href="#" class="btn">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Изработено со &#128147; од студентите на Brainster</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
